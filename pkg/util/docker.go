@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/docker/docker/api/types"
-	"github.com/docker/docker/client"
+	"github.com/moby/moby/client"
 	log "github.com/sirupsen/logrus"
 )
 

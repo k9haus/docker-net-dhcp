@@ -4,13 +4,14 @@ on:
   push:
     branches:
       - master
+  pull_request:
 
 jobs:
   docker:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
 
     env:
-      PLUGIN_NAME: ghcr.io/vpaprots/docker-net-dhcp
+      PLUGIN_NAME: ghcr.io/k9haus/docker-net-dhcp
       PLATFORMS: linux/amd64,linux/arm64  #,linux/386,,linux/arm/v7
 
     steps:
@@ -35,6 +36,7 @@ jobs:
         run: make PLUGIN_TAG=${{ steps.vars.outputs.tag }} multiarch
 
       - name: Push
+        if: github.ref == 'refs/heads/master'
         env:
           REGISTRY_USERNAME: ${{ github.actor }}
           REGISTRY_PASSWORD: ${{ secrets.GITHUB_TOKEN }}

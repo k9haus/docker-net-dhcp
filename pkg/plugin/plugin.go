@@ -7,9 +7,9 @@ import (
 	"regexp"
 	"time"
 
-	docker "github.com/docker/docker/client"
 	"github.com/gorilla/handlers"
 	"github.com/mitchellh/mapstructure"
+	docker "github.com/moby/moby/client"
 	"github.com/vishvananda/netlink"
 
 	"github.com/vpaprots/docker-net-dhcp/pkg/util"
