@@ -1,4 +1,4 @@
-module github.com/vpaprots/docker-net-dhcp
+module github.com/k9haus/docker-net-dhcp
 
 go 1.25.0
 

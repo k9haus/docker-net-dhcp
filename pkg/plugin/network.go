@@ -13,8 +13,8 @@ import (
 	"github.com/vishvananda/netlink"
 	"golang.org/x/sys/unix"
 
-	"github.com/vpaprots/docker-net-dhcp/pkg/udhcpc"
-	"github.com/vpaprots/docker-net-dhcp/pkg/util"
+	"github.com/k9haus/docker-net-dhcp/pkg/udhcpc"
+	"github.com/k9haus/docker-net-dhcp/pkg/util"
 )
 
 // CLIOptionsKey is the key used in create network options by the CLI for custom options
